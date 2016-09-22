@@ -35,6 +35,7 @@
   SyntaxHighlighter.config.clipboardSwf = 'http://alexgorbatchev.com/pub/sh/current/scripts/clipboard.swf';
   SyntaxHighlighter.all();
   </script>
+
 </head>
 <body>
 <div class="header">
@@ -47,7 +48,7 @@
 </a>
       <ul id='dropdown2' class='dropdown-content'>
       <li><a href="../tutorial-css.html">CSS</a></li>
-      <li><a href="../tutorial-php.html">PHP</a></li>
+      <li><a href="#!">PHP</a></li>
       <li><a href="#!">JAVASCRIPT</a></li>
       </ul>
 
@@ -56,49 +57,36 @@
 
 <center>
 <div class="isi">
-  <!-- <center><img style="width:50%;" src="../image/css.jpg"></center><p> -->
-  Sekarang saya akan membagi shortcut keyboard dilinux KDE/XFACE yang sering saya gunakan
-    <table border="1" >
-      <tr>
-        <td>CTRL + T</td><td>Tab Baru</td>
-      </tr>
-      <tr>
-        <td>CTRL + W</td><td>Tutup Tab</td>
-      </tr>
-      <tr>
-        <td>CTRL + Tab</td><td>Tab Selanjutnya</td>
-      </tr>
-      <tr>
-        <td>CTRL + Shift + Tab</td><td>Tab Sebelumnya</td>
-      </tr>
-      <tr>
-        <td>CTRL + N</td><td>Jendela Baru</td>
-      </tr>
-      <tr>
-        <td>CTRL + Shift + N</td><td>Folder Baru</td>
-      </tr>
-      <tr>
-        <td>CTRL + ESC</td><td>Membuka Menu</td>
-      </tr>
-      <tr>
-        <td>F2</td><td>Rename</td>
-      </tr>
-      <tr>
-        <td>CTRL + Shift + C </td><td>Copy diterminal</td>
-      </tr>
-      <tr>
-        <td>CTRL + Shift + V</td><td>Paste diterminal</td>
-      </tr>
-      <tr>
-        <td>CTRL + Shift + X</td><td>Cut diterminal</td>
-      </tr>
-    </table>
+  Saya anggap anda telah bisa membuat koneksi kedatabase SQL. Jadi kita akan langsung kequery INSERT pada SQL
+  yang mana fungsi nya untuk menambahkan data dari inputan PHP ke database SQL. Oke tanpa basa basi langsung saja
+  kecara pertama.<br>
+  <div class="isi-1">
+    $query = "INSERT INTO namatable (field1,field2,field3) VALUE ('ayam','naga','singa')"
+  </div>
+  <i>
+    keterangan :
+    1.$query = nama vaiabel untuk query sql insert<br>
+    2.namatable = isikan sesuai nama table didatabase kalian sesuai yang ingin kalian masukan data.<br>
+    3.field1,field2,field3 = nama field didalam table yang ingin kalian masukan data.<br>
+    4.'ayam','naga','singa' = nilai yang ingin kalian masukan.<br>
+    urutan dari value sesuaikan dengan urutan field database kalian.
+ </i>
+   selanjutanya kita beri perintah untuk menjalankan query tersebut
+  <div class="isi-2">
+     mysqli_query($link,$query);
+  </div>
+  <i>
+   keterangan :
+   1.$query = nama vaiabel query insert tadi<br>
+   2.$link = nama variabel koneksi kedatabase.<br>
+  </i>
+  nah sekarang data telah ditambahkan kedalam database.<br>
 
-    Semoga bermanfaat.. ^_^
+  Kalau ada yang salah tolong komentar nya ya.. Selamat mencoba. ^_^
+  <p>
 
-      <div id="disqus_thread"></div>
+  <div id="disqus_thread"></div>
 <script>
-
 /**
  *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
  *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables */
