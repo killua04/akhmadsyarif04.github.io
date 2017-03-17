@@ -35,6 +35,7 @@
   SyntaxHighlighter.config.clipboardSwf = 'http://alexgorbatchev.com/pub/sh/current/scripts/clipboard.swf';
   SyntaxHighlighter.all();
   </script>
+
 </head>
 <body>
 <div class="header">
@@ -46,9 +47,9 @@
     <a style="background-color:#20759e;" class='dropdown-button btn' data-activates='dropdown2' href="">TUTORIAL <i class="fa fa-angle-down" aria-hidden="true"></i>
 </a>
       <ul id='dropdown2' class='dropdown-content'>
-        <li><a href="../tutorial-css.html">CSS</a></li>
-        <li><a href="../tutorial-php">PHP</a></li>
-        <li><a href="../tutorial-android.html">Android Studio</a></li>
+      <li><a href="../tutorial-css.html">CSS</a></li>
+      <li><a href="../tutorial-php.html">PHP</a></li>
+      <li><a href="../tutorial-android.html">Android Studio</a></li>
       </ul>
 
   </div>
@@ -56,86 +57,74 @@
 
 <center>
 <div class="isi">
-  <center><img style="width:50%;" src="../image/css.jpg"></center><p>
-    CSS adalah singkatan dari Cascading Style Sheets. Berisi rangkaian instruksi yang kita tentukan
-    untuk mempercantik tampilan web. Perancangan desain text/tampilan web dapat dilakukan dengan mendefinisikan
-    fonts (huruf) , colors (warna), margins (ukuran), latar belakang (background), ukuran font (font sizes) dan lain-lain.
-    Elemen-elemen seperti colors (warna) , fonts (huruf), sizes (ukuran) dan spacing (jarak) disebut juga styles.
-    Cascading Style Sheets juga bisa berarti meletakkan styles yang berbeda pada layers (lapisan) yang berbeda.
-    CSS terdiri dari style sheet yang memberitahukan browser bagaimana suatu dokumen akan disajikan.  Fitur-fitur baru pada halaman
-    web lama dapat ditambahkan dengan bantuan style sheet.  Saat menggunakan CSS, Anda tidak perlu menulis font, color atau size
-    pada setiap paragraf, atau pada setiap dokumen. Setelah Anda membuat sebuah style sheet, Anda dapat menyimpan kode tersebut sekali
-    saja dan dapat kembali menggunakannya bila diperlukan.
-    <br>
-    Contoh sintak CSS internal :<p>
-      <pre class="brush: css">
-        &lt;html&gt;
-          &lt;head&gt;
-            &lt;style&gt;
-              h1{
-                color:red;
-              }
-            &lt;/style&gt;
-          &lt;/head&gt;
-          &lt;body&gt;
-            &lt;h1&gt;Text H1&lt;/h1&gt;
-          &lt;/body&gt;
-        &lt;html&gt;>
-      </pre>
-      <br>
-    Contoh sintak CSS inline : <p>
-      <pre class="brush: css">
-        &lt;html&gt;
-        &lt;head&gt;
-          &lt;title&gt;CSS&lt;/title&gt;
-        &lt;/head&gt;
-        &lt;body&gt;
-          &lt;h1 style=&quot;color:blue&quot;&gt;Text H1&lt;/h1&gt;
-        &lt;/body&gt;
-        &lt;/html&gt;
-      </pre>
-      <br>
-    Contoh sintak CSS external :<p>
-    #Pertama bikin file nama_file.html tambahkan &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;nama_file.css&quot;&gt;
-    kedalam html dan letakkan diatas &lt;/head&gt; seperti dibawah ini :
-      <pre class="brush: css">
-        &lt;html&gt;
-        &lt;head&gt;
-          &lt;title&gt;CSS&lt;/title&gt;
-          &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;nama_file.css&quot;&gt;
-        &lt;/head&gt;
-        &lt;body&gt;
-          &lt;h1&gt;Text H1&lt;/h1&gt;
-        &lt;/body&gt;
-        &lt;/html&gt;
-      </pre>
-      nama_file.css pada href=&quot;nama_file.css&quot;&gt; sesuaikan dengan nama file css anda.
-      <br>
-    #Kedua bikin file nama_file.css dan copy kode dibawah ini :
-      <pre class="brush: css">
-        h1{
-          font-size:15px;
-        }
-      </pre>
-      <br>
-      Selanjutnya kita akan mengenal nama-nama setiap bagian CSS :
-      <pre class="brush: css">
-        h1{
-          font-size:15px;
-        }
-      </pre>
-      <ul>
-        <li>h1 -> Selector</li>
-        <li>{ } -> Deklarasi</li>
-        <li>font-size -> Properti</li>
-        <li>15px -> Nilai/Value</li>
-      </ul>
-      <br>
-      Sekian dan terimakasih, semoga bermanfaat. ^_^
+  <p>
+    Hello, ^_^ akhirnya dapet mood juga bikin tutorial. hehe tutorial kali ini saya akan
+    menjelaskan cara install Android Studio di Linux Manjaro dengan Based ArchLinux.
+  </p>
+  <p>
+    Sedikit cerita. Beberapa Minggu kemaren saya pengen berlajar Android Studio tetapi ketika saya
+    menginstall android studio disalah satu OS Linux saya yang mana OS nya adalah Manjaro saya sangat kesusahan,
+    karena tutorial yang saya temui digoogle kebanyakan instalasi nya lancar lancar aja, sedangkan saya sendiri
+    sangat kesusahan dalam meinstall aplikasi ini. <br>
+    Pertama saya menemukan dengan cara installasi lewat yaourt
+    <div class="isi-1">
+      <i>yaourt -S android-studio</i>
+    </div>
+    akan tetapi terdapat error bahwa android studio tidak mendukung arsitektur 64bit. saya coba lagi dengan enable multilib
+    agar bisa menginstall android studio. Yaitu dengan edit bagian /etc/pacaman.conf hapus tanda
+    komentar pada bagian sepeti dibawah ini.
+    <div class="isi-2">
+      <i>[multilib]<br>
+          Include = /etc/pacman.d/mirrorlist
+      </i>
+    </div>
+    link <i>https://wiki.archlinux.org/index.php/multilib</i><br>
+    Akan tetapi hasil nya juga sama, dan error yang sama juga.. ToT
+  </p>
+  <p>
+    Setelah beberapa lama saya temukan tutorial yang pass dan berhasil.<br>
+    Pertama download dulu Android Studio dilink ini <i>https://developer.android.com/studio/index.html</i><br>
+    Kedua install jdk lewat yaourt
+    <div class="isi-1">
+      <i>yaourt -S jdk</i>
+    </div>
+    Kalau udah, jalankan perintah dibawah ini
+    <div class="isi-2">
+      <i>sudo archlinux-java set java-8-jdk</i>
+    </div>
+    Lalu extract android studio yang didownload waktu pertama tadi, kemudian masuk direktori
+    <b>androidstudio/bin</b> dan jalan kan perintah <b>./studio.sh</b><br>
+    maka android studio akan berjalan. silahkan dinext next aja.. hihihi
+  </p>
+  <p>
+    Kalo sudah tampil seperti ini<br>
+    <img src="../image/tampilan-android-1.png" alt=""><br>
+    Pilih <b>Start a new Android Studio Project</b>
+    Kalau tidak ada error maka selamat anda berhasil instalasi Android Studio.<br>
+    Kalau ada error seperti ini <br>
+    <img src="../image/error-android.jpg" alt=""><br>
+    Maka lakukan secara berurutan langkah dibawah ini
+    <p>
+      <ol type="1">
+        <li>Buat folder (AndroidStudioProjects) terlebih dulu. </li>
+        <li>Jalankan lagi android studio kamu.</li>
+        <li>Pilih Configure -> Project Defaults -> Project Structure.</li>
+        <li>Pada bagian Android SDK cari direktori SDK punya kamu. </li>
+        <li>Setelah itu klik OK</li>
+      </ol>
+    </p>
 
-      <div id="disqus_thread"></div>
+    Selesai.. silahkan dibuka lagi android studio nya dan
+    Pilih <b>Start a new Android Studio Project</b>
+  </p>
+  Kalau ada yang salah tolong komentar ya.. Selamat mencoba. ^_^<br>
+  referensi :<br>
+  <i>https://forum.manjaro.org/t/android-studio-installation-guide/12630</i><br>
+  <i>http://stackoverflow.com/questions/21794272/android-sdk-is-missing-out-of-date-or-is-missing-templates-please-ensure-you</i>
+  <p>
+
+  <div id="disqus_thread"></div>
 <script>
-
 /**
  *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
  *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables */
